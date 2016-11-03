@@ -26,9 +26,8 @@
 <h1>Bugs Cleanup Dashboard</h1>
 
 <p>
-This dashboard intents to give an overview of the bug reports which need
-attention according to the tasks documented at the
-<a href="https://wiki.openstack.org/wiki/BugTriage">OpenStack wiki</a>
+This dashboard intents to give an overview of the QEMU bug reports which need
+attention.
 </p>
 
 <p>
@@ -38,11 +37,12 @@ github</a>
 </p>
 
 <p>
-This gets updated hourly. Last update: {{ last_update }}
+Last update: {{ last_update }}
 </p>
 
-<p>
-Author: Markus Zoeller (markus_z)
+<p style="font-size:60%">
+Original dashboard written by: Markus Z&ouml;ller (markus_z)<br />
+Adaption for QEMU by: Thomas Huth
 </p>
 
 <div id="tabs">
@@ -57,7 +57,6 @@ Author: Markus Zoeller (markus_z)
         <li><a href="#tabPatch">Patch</a></li>
         <li><a href="#tabWishlist">Old Wishlist</a></li>
         <li><a href="#tabExpired">Expired</a></li>
-        <li><a href="#tabCelebrate">Celebrate</a></li>
     </ul>
     <div id="tabRecent">
         <p>Task1: The list below shows the recently created bug reports.
@@ -105,9 +104,9 @@ Author: Markus Zoeller (markus_z)
     </div>
     <div id="tabFixCommitted">
         <p>Task3 b: The list below shows bug reports in the state
-            <code>Fix Committed</code>. Since the Mitaka cycle we use the
-            direct release model, which means those bug reports should have
-            <code>Fix Released</code>.
+            <code>Fix Committed</code>. Once a new version of QEMU has been
+            released, check whether their state can be set to
+            <code>Fix Released</code> instead.
         </p>
         <ol>
             {% for b in fix_committed %}
@@ -192,8 +191,7 @@ Author: Markus Zoeller (markus_z)
            and are therefore potentially expired. To remove a still valid bug
            report from this list you can leave a comment like
            <code>CONFIRMED FOR: RELEASE_NAME</code> (all caps) in that bug
-           report. For example for Newton this would be
-           <code>CONFIRMED FOR: NEWTON</code>.
+           report.
            This works also for the last stable releases.
         </p>
         <ol>
@@ -205,18 +203,6 @@ Author: Markus Zoeller (markus_z)
             </li>
             {% endfor %}
         </ol>
-    </div>
-    <div id="tabCelebrate">
-        <p>Task 10: Celebrate
-        </p>
-        <center>
-            <img src="images/celebrate_amy.gif"/><br/>
-            <img src="images/celebrate_chris.gif"/><br/>
-            <img src="images/celebrate_james.gif"/><br/>
-            <img src="images/celebrate_tina.gif"/><br/>
-            <img src="images/celebrate_leo.gif"/><br/>
-            <img src="images/celebrate_psych.gif"/><br/>
-        </center>
     </div>
 
 </div>
