@@ -32,7 +32,7 @@ DAYS_SINCE_RECENT = 10
 DAYS_OLD_WISHLIST = 365
 LP_OPEN_STATES = ["New", "Incomplete", "Confirmed", "Triaged", "In Progress"]
 
-DAYS_SINCE_CREATED = 30 * 18  # 18 months
+DAYS_SINCE_CREATED = 30 * 36  # 36 months
 STILL_VALID_FLAG = "CONFIRMED FOR: %(release_name)s"  # UPPER CASE
 
 SUPPORTED_RELEASE_NAMES = []
