@@ -26,7 +26,7 @@ args = parser.parse_args()
 PROJECT_NAME = args.project_name
 
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
-DAYS_SINCE_INCOMPLETE = 30
+DAYS_SINCE_INCOMPLETE = 60
 DAYS_SINCE_IN_PROGRESS = 14
 DAYS_SINCE_RECENT = 10
 DAYS_OLD_WISHLIST = 365
